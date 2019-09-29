@@ -1,0 +1,3 @@
+pydub
+google-cloud-speech
+gcloud
