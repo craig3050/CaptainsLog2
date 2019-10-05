@@ -31,7 +31,7 @@ def decode_audio(in_filename, **input_kwargs):
     return "converted.flac"
 
 
-def upload_to_gcs(in_filename, **input_kwargs):
+def upload_to_gcs(in_filename):
     # upload resultant file to GCS
     storage_client = storage.Client()
     buckets = list(storage_client.list_buckets())
@@ -42,7 +42,7 @@ def upload_to_gcs(in_filename, **input_kwargs):
     return str("gs://audioprocess/" + in_filename)
 
 
-def delete_from_gcs(in_filename, **input_kwargs):
+def delete_from_gcs(in_filename):
     # upload resultant file to GCS
     storage_client = storage.Client()
     buckets = list(storage_client.list_buckets())
